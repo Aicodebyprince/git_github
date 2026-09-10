@@ -75,12 +75,6 @@ export default function S07Staging() {
           </Terminal>
         </div>
       </div>
-
-      <div className="interaction">
-        <span className="reveal-note rise" style={{ '--d': '1.2s' }}>
-          Stage like a photographer: <b>choose what goes in the photo</b> before you press the shutter
-        </span>
-      </div>
     </section>
   );
 }

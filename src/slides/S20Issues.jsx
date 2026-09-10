@@ -56,12 +56,6 @@ export default function S18Issues() {
           ))}
         </div>
       </div>
-
-      <div className="interaction">
-        <span className="reveal-note rise" style={{ '--d': '1.1s' }}>
-          An issue is a promise: <b>“this problem is known, tracked, and will be handled”</b>
-        </span>
-      </div>
     </section>
   );
 }

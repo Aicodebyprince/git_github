@@ -150,12 +150,6 @@ export default function S20RealWorld() {
         <span className="tag"><b className="rs-bad">Silent bugs</b> → solved by PRs &amp; CI</span>
         <span className="tag"><b className="rs-bad">No rollback</b> → solved by git revert</span>
       </div>
-
-      <div className="interaction">
-        <span className="reveal-note rise" style={{ '--d': '.8s' }}>
-          Pull → branch → commit → push → PR → merge — <b>this loop is how real software ships, every day</b>
-        </span>
-      </div>
     </section>
   );
 }

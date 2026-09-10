@@ -60,12 +60,6 @@ export default function S05Repository() {
           ))}
         </div>
       </div>
-
-      <div className="interaction">
-        <span className="reveal-note rise" style={{ '--d': '1.2s' }}>
-          One repo = one project. <b>.git</b> remembers · your files do the work · GitHub is the shared copy in the cloud
-        </span>
-      </div>
     </section>
   );
 }

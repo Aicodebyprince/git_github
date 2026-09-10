@@ -72,12 +72,6 @@ export default function S09Workflow() {
           </Terminal>
         </div>
       </div>
-
-      <div className="interaction">
-        <span className="reveal-note rise" style={{ '--d': '1.3s' }}>
-          Pull first thing in the morning, push before you leave — that's the whole secret
-        </span>
-      </div>
     </section>
   );
 }

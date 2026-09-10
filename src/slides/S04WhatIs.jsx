@@ -42,12 +42,6 @@ export default function S04WhatIs() {
           </div>
         </div>
       </div>
-
-      <div className="interaction">
-        <span className="reveal-note rise" style={{ '--d': '1.3s' }}>
-          Created in 2005 by <b>Linus Torvalds</b> — the creator of Linux · today the most used VCS on Earth
-        </span>
-      </div>
     </section>
   );
 }

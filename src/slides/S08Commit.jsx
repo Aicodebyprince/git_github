@@ -61,12 +61,6 @@ export default function S06Anatomy() {
           ))}
         </div>
       </div>
-
-      <div className="interaction">
-        <span className="reveal-note rise" style={{ '--d': '3s' }}>
-          “Git doesn't store versions. It stores <b>history</b> — and history can't be silently rewritten.”
-        </span>
-      </div>
     </section>
   );
 }

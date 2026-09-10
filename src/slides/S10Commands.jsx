@@ -104,9 +104,6 @@ export default function S10Commands() {
               <span key={s} className="tag">{s}</span>
             ))}
           </div>
-          <p className="reveal-note rise" style={{ '--d': '.6s', margin: 0 }}>
-            You'll meet these six helpers next: <b>status · log · branch · switch · merge · restore</b>
-          </p>
         </div>
       </div>
     </section>

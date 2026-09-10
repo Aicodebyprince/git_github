@@ -102,12 +102,6 @@ export default function S12Merging() {
         <span className="tag">✓ keep branches short-lived</span>
         <span className="tag warn">✓ main must always stay green</span>
       </div>
-
-      <div className="interaction">
-        <span className="reveal-note rise" style={{ '--d': '.8s' }}>
-          Only when both sides edit the <b>same lines</b> does Git stop and ask for help — that's the next slide →
-        </span>
-      </div>
     </section>
   );
 }

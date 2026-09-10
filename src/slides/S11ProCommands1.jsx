@@ -112,12 +112,6 @@ export default function S11ProCommands1() {
           </div>
         ))}
       </div>
-
-      <div className="interaction">
-        <span className="reveal-note rise" style={{ '--d': '.7s' }}>
-          Read history · move through it · pause your work — <b>next: how pros undo and rewrite it</b>
-        </span>
-      </div>
     </section>
   );
 }

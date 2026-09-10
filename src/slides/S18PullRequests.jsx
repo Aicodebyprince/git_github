@@ -70,12 +70,6 @@ export default function S16PullRequests() {
           </div>
         </div>
       </div>
-
-      <div className="interaction">
-        <span className="reveal-note rise" style={{ '--d': '1.6s' }}>
-          PRs turn “trust me” into <b>“show me”</b> — and code gets better before it ships
-        </span>
-      </div>
     </section>
   );
 }

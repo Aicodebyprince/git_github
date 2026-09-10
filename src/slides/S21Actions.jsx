@@ -59,12 +59,6 @@ export default function S19Actions() {
           ))}
         </div>
       </div>
-
-      <div className="interaction">
-        <span className="reveal-note rise" style={{ '--d': '1.1s' }}>
-          Automation turns <b>“hope it works”</b> into <b>“we know it works”</b>
-        </span>
-      </div>
     </section>
   );
 }

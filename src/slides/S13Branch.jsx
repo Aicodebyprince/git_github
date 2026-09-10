@@ -104,12 +104,6 @@ export default function S11Branch() {
         <span className="tag">bugfix/header</span>
         <span className="tag">hotfix/v1.2</span>
       </div>
-
-      <div className="interaction">
-        <span className="reveal-note rise" style={{ '--d': '.8s' }}>
-          The full life of a branch: <b>git switch -c</b> → commit → <b>git merge</b> → <b>git branch -d</b> — the merge happens on the next slide →
-        </span>
-      </div>
     </section>
   );
 }

@@ -153,14 +153,17 @@ body {
 .slide {
   flex: 1;
   min-height: 0;
+  height: 100%;
+  max-height: 100%;
   display: flex;
   flex-direction: column;
-  padding: clamp(16px, 3vh, 34px) clamp(22px, 5vw, 78px) clamp(10px, 1.6vh, 18px);
+  padding: clamp(14px, 2.4vh, 28px) clamp(20px, 4vw, 68px) clamp(8px, 1.2vh, 16px);
   max-width: 1340px;
   width: 100%;
   margin: 0 auto;
   overflow-y: auto;
   overflow-x: hidden;
+  box-sizing: border-box;
   scrollbar-width: thin;
   scrollbar-color: #2d3760 transparent;
 }
@@ -171,9 +174,10 @@ body {
 
 /* header */
 .slide-head {
+  flex: none;
   position: relative;
-  margin-bottom: clamp(10px, 1.8vh, 20px);
-  padding-bottom: clamp(10px, 1.6vh, 16px);
+  margin-bottom: clamp(8px, 1.5vh, 16px);
+  padding-bottom: clamp(8px, 1.4vh, 14px);
 }
 .slide-head::after {
   content: '';

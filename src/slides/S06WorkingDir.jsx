@@ -68,12 +68,6 @@ export default function S06WorkingDir() {
           </Terminal>
         </div>
       </div>
-
-      <div className="interaction">
-        <span className="reveal-note rise" style={{ '--d': '1.2s' }}>
-          “Git is a <b>bodyguard, not a babysitter</b> — it watches everything and interferes with nothing.”
-        </span>
-      </div>
     </section>
   );
 }

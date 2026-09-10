@@ -62,12 +62,6 @@ export default function S15GitHubRepos() {
           ))}
         </div>
       </div>
-
-      <div className="interaction">
-        <span className="reveal-note rise" style={{ '--d': '1.1s' }}>
-          ★ star = bookmark it · 🍴 fork = copy it · issues & PRs = discuss and improve it
-        </span>
-      </div>
     </section>
   );
 }
