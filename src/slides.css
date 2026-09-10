@@ -806,12 +806,13 @@
 /* S12 · golden rules strip */
 .golden-strip {
   display: flex;
-  gap: 10px;
+  gap: 8px;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: clamp(10px, 1.8vh, 16px);
+  margin-top: clamp(8px, 1.2vh, 12px);
+  flex: none;
 }
-.golden-strip .tag { font-size: 12.5px; padding: 8px 16px; }
+.golden-strip .tag { font-size: 11.5px; padding: 5px 14px; }
 
 /* ============================================================================
    PART VI — Animated conflict demo (Slide 13)
@@ -829,14 +830,14 @@
   overflow: hidden;
   box-shadow: inset 0 0 60px rgba(99, 102, 241, 0.05), 0 18px 44px -20px rgba(2, 4, 14, 0.7);
 }
-.cd-bar { display: flex; align-items: center; gap: 6px; padding: 8px 12px; background: rgba(255, 255, 255, 0.04); border-bottom: 1px solid #1d2547; }
+.cd-bar { display: flex; align-items: center; gap: 6px; padding: 6px 12px; background: rgba(255, 255, 255, 0.04); border-bottom: 1px solid #1d2547; }
 .cd-dot { width: 9px; height: 9px; border-radius: 50%; }
 .cd-dot.r { background: #ff5f57; }
 .cd-dot.y { background: #febc2e; }
 .cd-dot.g { background: #28c840; }
 .cd-file { margin-left: 8px; font-family: var(--font-mono); font-size: 11px; color: #7c88b8; }
-.cd-body { padding: 12px 16px; font-family: var(--font-mono); font-size: clamp(12.5px, 1.35vw, 14.5px); line-height: 2.05; }
-.cd-line { display: flex; gap: 14px; opacity: 0; transform: translateY(6px); }
+.cd-body { padding: 9px 14px; font-family: var(--font-mono); font-size: clamp(11.5px, 1.2vw, 13px); line-height: 1.75; }
+.cd-line { display: flex; gap: 12px; opacity: 0; transform: translateY(6px); }
 .cd-line.shown { animation: rise 0.45s ease forwards; }
 .cd-num { color: #4a547f; user-select: none; min-width: 14px; text-align: right; }
 .cd-line code { color: #dbe2ff; white-space: pre; }
@@ -848,16 +849,16 @@
 .cd-done {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  margin-top: 10px;
+  gap: 7px;
+  margin-top: 5px;
   font-family: var(--font-display);
   font-weight: 800;
-  font-size: clamp(13px, 1.4vw, 15px);
+  font-size: clamp(11.5px, 1.2vw, 13px);
   color: var(--good);
   background: rgba(52, 211, 153, 0.1);
   border: 1px solid rgba(52, 211, 153, 0.35);
   border-radius: 999px;
-  padding: 8px 16px;
+  padding: 5px 13px;
   opacity: 0;
 }
 .cd-done.shown { animation: rise 0.5s ease forwards; }
@@ -866,14 +867,15 @@
 .why-banner {
   display: grid;
   grid-template-columns: auto repeat(3, 1fr);
-  gap: clamp(12px, 1.6vw, 20px);
+  gap: clamp(10px, 1.4vw, 16px);
   align-items: center;
-  padding: clamp(13px, 2vh, 19px) clamp(16px, 2vw, 26px);
-  margin-bottom: clamp(10px, 1.8vh, 16px);
+  padding: clamp(9px, 1.3vh, 13px) clamp(14px, 1.8vw, 22px);
+  margin-bottom: clamp(8px, 1.3vh, 13px);
+  flex: none;
 }
 .why-banner .why-label {
   font-family: var(--font-display);
-  font-size: clamp(14px, 1.5vw, 17px);
+  font-size: clamp(13px, 1.35vw, 15px);
   font-weight: 800;
   color: var(--brand-deep);
   white-space: nowrap;
@@ -881,11 +883,11 @@
 }
 .why-item {
   display: flex;
-  gap: 10px;
+  gap: 8px;
   align-items: flex-start;
-  font-size: clamp(12.5px, 1.3vw, 14.5px);
+  font-size: clamp(11.5px, 1.15vw, 13px);
   color: var(--ink-2);
-  line-height: 1.5;
+  line-height: 1.45;
   font-weight: 600;
 }
 .why-item b { color: var(--ink); }
@@ -902,12 +904,12 @@
   flex: 1;
   min-height: 0;
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: clamp(14px, 2.2vw, 30px);
+  grid-template-columns: 1.12fr 0.88fr;
+  gap: clamp(12px, 1.8vw, 24px);
   align-items: stretch;
 }
 .merge-demo {
-  padding: clamp(16px, 2.4vh, 26px);
+  padding: clamp(12px, 1.8vh, 18px);
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -922,16 +924,16 @@
 }
 .md-step {
   font-family: var(--font-mono);
-  font-size: 13.5px;
+  font-size: 12.5px;
   font-weight: 700;
   color: var(--brand-deep);
   background: var(--brand-soft);
   border: 1px solid rgba(129, 140, 248, 0.32);
   border-radius: 999px;
-  padding: 9px 18px;
+  padding: 6px 14px;
   letter-spacing: 0.02em;
 }
-.md-replay { padding: 9px 20px; font-size: 13.5px; }
+.md-replay { padding: 6px 15px; font-size: 12.5px; }
 .md-svg { width: 100%; height: auto; margin-top: 2px; }
 
 /* graph elements */
@@ -953,26 +955,26 @@
   justify-content: center;
   gap: 8px;
   font-family: var(--font-mono);
-  font-size: 12.5px;
+  font-size: 12px;
   color: var(--ink-2);
   font-weight: 600;
 }
-.md-legend-dot { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
+.md-legend-dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
 .md-legend-dot.main { background: var(--brand); }
 .md-legend-dot.feat { background: var(--brand-2); }
 .md-legend-dot.good { background: var(--good); }
 
 /* right column: terminal + kinds */
-.merge-right { display: flex; flex-direction: column; gap: clamp(10px, 1.8vh, 16px); min-height: 0; }
-.merge-term { flex: 1; min-height: 0; }
-.merge-term .terminal-body { font-size: clamp(13px, 1.45vw, 15.5px); line-height: 2.1; }
+.merge-right { display: flex; flex-direction: column; gap: clamp(8px, 1.2vh, 12px); min-height: 0; }
+.merge-term { flex: 1; min-height: 0; overflow-y: auto; }
+.merge-term .terminal-body { font-size: clamp(11.5px, 1.2vw, 13px); line-height: 1.75; padding: 10px 14px; }
 .term-line { opacity: 0; }
 .term-line.shown { animation: rise 0.45s ease forwards; }
-.merge-kinds { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(10px, 1.6vw, 16px); }
-.merge-kind { display: flex; gap: 13px; align-items: flex-start; padding: clamp(13px, 2vh, 18px) 17px; }
-.merge-kind .mk-ico { flex: none; width: 44px; height: 44px; border-radius: 13px; display: grid; place-items: center; }
-.merge-kind h4 { margin: 0 0 3px; font-family: var(--font-display); font-size: clamp(15px, 1.55vw, 18px); font-weight: 800; letter-spacing: -0.01em; }
-.merge-kind p { margin: 0; font-size: clamp(12.5px, 1.3vw, 14px); color: var(--ink-2); line-height: 1.55; }
+.merge-kinds { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(8px, 1.2vw, 12px); flex: none; }
+.merge-kind { display: flex; gap: 10px; align-items: flex-start; padding: clamp(9px, 1.3vh, 13px) 13px; }
+.merge-kind .mk-ico { flex: none; width: 36px; height: 36px; border-radius: 10px; display: grid; place-items: center; }
+.merge-kind h4 { margin: 0 0 2px; font-family: var(--font-display); font-size: clamp(13px, 1.35vw, 15px); font-weight: 800; letter-spacing: -0.01em; }
+.merge-kind p { margin: 0; font-size: clamp(11px, 1.1vw, 12.5px); color: var(--ink-2); line-height: 1.45; }
 
 @media (max-width: 1020px) {
   .merge-demo-grid { grid-template-columns: 1fr; flex: none; }

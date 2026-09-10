@@ -32,12 +32,23 @@ const LINES = [
 ];
 
 const BASICS = [
-  { ico: 'key', title: 'The markers', text: <>Git writes <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</code>, <code>=======</code> and <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt; branch</code> around the clash — both versions shown side by side, inside your file.</> },
-  { ico: 'shield', title: 'Protection, not failure', text: 'Git never guesses. A conflict is Git refusing to silently destroy someone\'s work — it stops and asks a human.' },
-  { ico: 'check', title: 'Resolve & test', text: 'Pick one side, combine them, or rewrite — then run your tests, git add, and commit. The merge completes.' },
+  {
+    ico: 'key',
+    color: '#fb7185',
+    bg: 'rgba(251, 113, 133, 0.14)',
+    title: 'The Conflict Markers',
+    text: <>Git marks the clash: <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</code> (current), <code>=======</code> (divider), and <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt; branch</code> (incoming). Delete markers & keep desired code.</>,
+  },
+  {
+    ico: 'check',
+    color: 'var(--good)',
+    bg: 'var(--good-soft)',
+    title: 'The 3-Step Resolution',
+    text: <>1. Edit file & delete marker lines &nbsp;·&nbsp; 2. <code>git add style.css</code> to mark resolved &nbsp;·&nbsp; 3. <code>git commit</code> to seal the merge.</>,
+  },
 ];
 
-export default function S13Conflicts() {
+export default function S15Conflicts() {
   const { n, done, replay } = useSequence(true, 6, 1500);
   const phase = Math.min(n, 5);
 
@@ -47,14 +58,14 @@ export default function S13Conflicts() {
         num={15}
         eyebrow="Act II · When Things Collide"
         title="Merge Conflicts — When Git Asks for Help"
-        sub="Git merges automatically most of the time. But when two branches edit the same lines, Git refuses to guess — it shows you both versions and asks you to decide."
+        sub="A conflict is not an error — it's Git refusing to guess. When two branches edit the exact same lines, Git protects both developers' work and asks a human to decide."
       />
 
       <div className="card why-banner rise" style={{ '--d': '.08s' }}>
-        <span className="why-label">Why conflicts happen — and why that's good</span>
-        <div className="why-item"><Icon name="branch" size={17} /><span><b>Same lines, two branches</b> — both edited the same region of the same file; a collision is unavoidable.</span></div>
-        <div className="why-item"><Icon name="shield" size={17} /><span><b>Nothing is silently lost</b> — Git refuses to overwrite either side's work.</span></div>
-        <div className="why-item"><Icon name="users" size={17} /><span><b>You make the call</b> — see both versions, decide, and commit. Like a built-in code review.</span></div>
+        <span className="why-label">Why conflicts happen</span>
+        <div className="why-item"><Icon name="branch" size={16} /><span><b>Same lines, two branches</b> — simultaneous edits to the same region.</span></div>
+        <div className="why-item"><Icon name="shield" size={16} /><span><b>Zero silent data loss</b> — Git never overwrites your teammate's code.</span></div>
+        <div className="why-item"><Icon name="users" size={16} /><span><b>Built-in code review</b> — inspect both versions, decide, and commit.</span></div>
       </div>
 
       <div className="merge-demo-grid">
@@ -69,7 +80,7 @@ export default function S13Conflicts() {
         </div>
 
         <div className="merge-right">
-          <Terminal title="git — conflict" className="merge-term">
+          <Terminal title="git — conflict resolution" className="merge-term">
             {LINES.map((l, idx) => (
               <div key={idx} className={'term-line' + (n >= l.at ? ' shown' : '')}>
                 {l.type === 'cmd' ? (
@@ -87,7 +98,7 @@ export default function S13Conflicts() {
           <div className="merge-kinds">
             {BASICS.map((k, idx) => (
               <div key={k.title} className="card merge-kind rise" style={{ '--d': `${0.5 + idx * 0.2}s` }}>
-                <div className="mk-ico"><Icon name={k.ico} size={18} /></div>
+                <div className="mk-ico" style={{ background: k.bg, color: k.color }}><Icon name={k.ico} size={18} /></div>
                 <div>
                   <h4>{k.title}</h4>
                   <p>{k.text}</p>
@@ -99,19 +110,9 @@ export default function S13Conflicts() {
       </div>
 
       <div className="golden-strip">
-        <span className="tag warn">⚠ conflicts need BOTH sides to edit the same lines</span>
-        <span className="tag">✓ read both versions before resolving</span>
-        <span className="tag">✓ run tests after every resolution</span>
-      </div>
-
-      <div className="interaction">
-        <div className="bigquote good rise" style={{ '--d': '.6s', maxWidth: 880 }}>
-          <span className="quote-mark">“</span>
-          <p>
-            A conflict is not an error — <span style={{ color: 'var(--good)' }}>it's Git refusing to guess.</span>
-            <span className="sub">Git protects both developers' work and asks a human to decide. That's a feature, not a bug.</span>
-          </p>
-        </div>
+        <span className="tag warn">⚠ conflicts only happen if BOTH branches touch the exact same line</span>
+        <span className="tag">✓ read both versions before removing markers</span>
+        <span className="tag good">✓ always run test suite before committing</span>
       </div>
     </section>
   );
